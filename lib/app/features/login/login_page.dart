@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
                 TextFormField(
                   controller: cpfEC,
                   validator: Validatorless.multiple(
-                    ([Validatorless.cpf('CPF Inválido'), Validatorless.required('Campo Obrigatório')]),
+                    ([Validatorless.required('Campo Obrigatório')]),
                   ),
                   inputFormatters: [
                     FilteringTextInputFormatter.digitsOnly,

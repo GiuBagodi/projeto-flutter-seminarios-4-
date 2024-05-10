@@ -12,8 +12,9 @@ class ProductCard extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         border: Border.all(
-          color: Colors.blue,
+          color: product.color,
         ),
+        color: product.color.withOpacity(0.2),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -25,7 +26,10 @@ class ProductCard extends StatelessWidget {
               Text(product.genre),
             ],
           ),
-          const Divider(),
+          Divider(
+            color: product.color,
+            thickness: 1.5,
+          ),
           Text(product.description),
         ],
       ),
